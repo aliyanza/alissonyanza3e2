@@ -1,0 +1,30 @@
+<button (click)="alternateVisibility()">REINICIAR</button>
+<section class="sidemenu-container"
+    [style.background-color]="theme"
+    [style.width]="widthMenu + '%' "
+    [style.transform]="visibleMenu ? 'translateX(0)' : 'translateX(-100%)'"
+    [style.opacity]="visibleMenu ? '1' : '0'"
+    [style.transition]="'transform 0.3s ease, opacity 0.3s ease'">
+
+    <div class="item">
+        <img src="https://th.bing.com/th/id/OIP.a_Bu_Y9OjJv-MbK9EkBHaQAAAA?w=300&h=300&rs=1&pid=ImgDetMain" alt="Profile Image" class="profile-img">
+        <p>{{userName}}</p>
+        <button class="transparent-button" (click)="alternateVisibility()"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNC45IiBkPSJNNDQgNDAuODM2cS03LjM0LTguOTYtMTMuMDM2LTEwLjE2OHQtMTAuODQ2LS4zNjVWNDFMNCAyMy41NDVMMjAuMTE4IDd2MTAuMTY3cTkuNTIzLjA3NSAxNi4xOTIgNi44MzNxNi42NjggNi43NTggNy42OSAxNi44MzZaIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="></button>
+    </div>
+    <div class="item">
+        <p><span>🌺</span>DASHBOARD</p>
+    </div>
+    <div class="item">
+        <p><span>🌸</span>PROFILE</p>
+    </div>
+    <div class="button-container">
+        <button class="bnt rounded-button" (click)="setTheme('gray')">CAMBIO DE COLORES</button>
+        <button class="bnt rounded-button" (click)="setSize()">CAMBIO DE TAMAÑO</button>
+    </div>
+</section>
+
+<!-- Aquí va el texto al lado del menú -->
+<div class="objective-text">
+    👀 Objetivo<br>
+    Desarrollar un componente de menú lateral (side-menu) en Angular que demuestre el uso de Enlace de Datos.
+</div>
